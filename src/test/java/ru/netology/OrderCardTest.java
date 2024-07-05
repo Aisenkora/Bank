@@ -195,19 +195,19 @@ class OrderCardTest {
         assertEquals("Поле обязательно для заполнения", text.trim());
     }
 
-//    @Test
-//    public void shouldNotOrderCardIfFieldsIsNotFilled() {
-//
-//        WebElement form = driver.findElement(By.cssSelector(".form"));
-//        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("");
-//        form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("");
-//        form.findElement(By.cssSelector(".button")).click();
-//
-//        String nameNotFilled = driver.findElement(By.cssSelector("[data-test-id=name].input_invalid .input__sub")).getText();
-//        assertEquals("Поле обязательно для заполнения", nameNotFilled.trim());
-//        String phoneNotFilled = driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).getText();
-//        assertEquals("Поле обязательно для заполнения", phoneNotFilled.trim());
-//    }
+    @Test
+    public void shouldNotOrderCardIfFieldsIsNotFilled() {
+
+        WebElement form = driver.findElement(By.cssSelector(".form"));
+        form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("");
+        form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("");
+        form.findElement(By.cssSelector(".button")).click();
+
+        String nameNotFilled = driver.findElement(By.cssSelector("[data-test-id=name].input_invalid .input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", nameNotFilled.trim());
+        String phoneNotFilled = driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", phoneNotFilled.trim());
+    }
 
     @Test
     public void shouldNotOrderCardIfPhone10Letters() {
